@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG to JSON</title>
+</head>
+<body>
+  <section id="example">
+    <svg height="100" width="100">
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+  </section>
+  <script src="svg-to-json.js"></script>
+  <script>
+    var svg = document.getElementById('example').innerHTML;
+    var svg_json = new SVGToJSON(svg, {
+      stats: true
+    });
+    console.log(svg_json);
+  </script>
+</body>
+</html>
